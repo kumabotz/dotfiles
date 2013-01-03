@@ -1,3 +1,3 @@
 # dotfiles
 
-Just some simple dotfiles.
+Some simple dotfiles.
