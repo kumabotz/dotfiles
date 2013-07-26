@@ -1,0 +1,7 @@
+source-file .tmux.conf
+
+# -------------------------
+# blog.admdklein.com/?p=726
+# -------------------------
+# move x clipboard into tmux paste buffer
+bind C-p run "tmux set-buffer \"$(xclip -o)\"; tmux paste-buffer"
