@@ -1,4 +1,4 @@
-source-file .tmux.conf
+source-file .tmux.conf.base
 
 # -------------------------
 # blog.admdklein.com/?p=726

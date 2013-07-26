@@ -1,4 +1,4 @@
-source-file .tmux.conf
+source-file .tmux.conf.base
 
 bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
