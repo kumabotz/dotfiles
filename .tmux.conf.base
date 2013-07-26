@@ -1,0 +1,30 @@
+# -------------------------------
+# thoughtbot: a-tmux-crash-course
+# -------------------------------
+# remap prefix to Control + a
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# force a reload of the config file
+unbind r
+bind r source-file ~/.tmux.conf
+
+# quick pane cycling
+unbind ^A
+bind ^A select-pane -t :.+
+
+# --------------------------
+# thoughtbot: love-hate-tmux
+# --------------------------
+# improve colors
+set -g default-terminal "screen-256color"
+
+# ---------------------------------------------------
+# thoughtbot: tmux-copy-paste-on-os-x-a-better-future
+# ---------------------------------------------------
+# use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# setup 'v' to begin selection as in vim
+bind-key -t vi-copy v begin-selection
