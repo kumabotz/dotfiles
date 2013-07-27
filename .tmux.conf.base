@@ -14,11 +14,46 @@ bind r source-file ~/.tmux.conf
 unbind ^A
 bind ^A select-pane -t :.+
 
+# ----------------------------------------------------------
+# blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer
+# ----------------------------------------------------------
+# split window vertical or horizontal
+unbind %
+bind | split-window -h
+bind - split-window -v
+
 # --------------------------
 # thoughtbot: love-hate-tmux
 # --------------------------
 # improve colors
 set -g default-terminal "screen-256color"
+
+# ---------------------------
+# mutelight.org/pratical-tmux
+# ---------------------------
+# start numbering at 1
+set -g base-index 1
+
+# allows for faster key repetition
+set -s escape-time 0
+
+# set status bar
+set -g status-bg default
+set -g status-fg white
+set -g status-left-fg yellow
+set -g status-right-fg yellow
+
+# rather than contraining window size to the maximum size of any client
+# connnected to the *session*, constrain window size to the maximum size of
+# any client connected to *that window*. Much mode reasonable
+setw -g aggressive-resize on
+
+# activity monitoring
+setw -g monitor-activity on
+set -g visual-activity on
+
+# highlight active window
+setw -g window-status-current-bg red
 
 # ---------------------------------------------------
 # thoughtbot: tmux-copy-paste-on-os-x-a-better-future
