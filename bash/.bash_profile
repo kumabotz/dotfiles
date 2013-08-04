@@ -85,13 +85,14 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+export RAILS_ENV='development'
+
 export ANDROID='/Applications/android-sdk-macosx'
 export ANDROID_HOME='/Applications/android-sdk-macosx'
 export ANDROID_VIEW_CLIENT_HOME='/usr/local/bin/AndroidViewClient'
 export MAGICK_HOME='/usr/local/Cellar/imagemagick/6.7.7-6'
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 
-# export PATH=/usr/local/Cellar/ruby/1.9.3-p194/bin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/maven/bin:/usr/local/mysql/bin:$HOME/.rvm/gems/ruby-1.9.3-p194/bin:$HOME/.rvm/gems/ruby-1.9.3-p194@global/bin:$HOME/.rvm/rubies/ruby-1.9.3-p194/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:${PATH}
 
 # PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}
@@ -100,3 +101,5 @@ export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/maven/bi
 # PATH=${M2_HOME}/bin:${PATH}
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+rvm use 1.9.3@ror3.2 --default
+
