@@ -1,0 +1,25 @@
+source ~/.bash_aliases.base
+
+alias bye='sudo shutdown -P now'
+alias d='meld'
+alias ff='firefox &'
+alias nb='cd ~/Projects/bitbucket'
+alias ng='cd ~/Projects/github'
+alias oo='nautilus'
+# alias l='ls -Fghl'                       # normal
+# alias la='ls -AFghl'                     # all
+# alias ld='ls -AFghl | grep ^d'           # all dir
+# alias ldt='ls -AFghlt | grep ^d'         # all dir + time
+# alias lf='ls -AFghl | grep -v ^d'        # all file
+# alias lft='ls -AFghlt | grep -v ^d'      # all file + time
+# alias lh='ls -AdFghl .*'                 # hidden
+# alias lhd='ls -AdFghl .* | grep ^d'      # hidden dir
+# alias lhdt='ls -AdFghlt .* | grep ^d'    # hidden dir + time
+# alias lhf='ls -AdFghl .* | grep -v ^d'   # hidden file
+# alias lhft='ls -AdFghlt .* | grep -v ^d' # hidden file + time
+# alias lt='ls -Fghlt'                     # normal + time
+# alias lht='ls -AdFghlt .*'               # hidden + time
+# alias ngit='rm -rf `find . -type d -name .git`'
+# alias ns='mv \!* `echo \!* | tr " " "_"`'
+# alias nsvn='rm -rf `find . -type d -name .svn`'
+# alias nt='rm -vf *~ .*~'
