@@ -1,4 +1,5 @@
 source ~/.bash_aliases.base
+source ~/.bash_aliases.tmp
 
 alias bye='sudo shutdown -P now'
 alias d='meld'
