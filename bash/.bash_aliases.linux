@@ -11,7 +11,6 @@ alias nb='cd ~/Projects/bitbucket'
 alias ng='cd ~/Projects/github'
 alias oo='gnome-open'
 alias sd='svn di -x -w | vim -R -' # svn diff with color, ignore whitespace
-alias ss='source ~/.bashrc'
 
 # alias l='ls -Fghl'                       # normal
 # alias la='ls -AFghl'                     # all
