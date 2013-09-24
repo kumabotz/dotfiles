@@ -3,7 +3,6 @@ function include {
 }
 
 include ~/.bash_aliases.base
-include ~/.bash_aliases.tmp
 
 alias bye='sudo shutdown -P now'
 alias d='meld'
@@ -31,3 +30,5 @@ alias ss='source ~/.bashrc'
 # alias ns='mv \!* `echo \!* | tr " " "_"`'
 # alias nsvn='rm -rf `find . -type d -name .svn`'
 # alias nt='rm -vf *~ .*~'
+
+include ~/.bash_aliases.tmp
