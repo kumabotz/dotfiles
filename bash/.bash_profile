@@ -24,6 +24,10 @@ function test_identities {
   fi
 }
 
+function include {
+  [[ -f "$1" ]] && source "$1"
+}
+
 # check for running ssh-agent with proper $SSH_AGENT_PID
 if [ -n "$SSH_AGENT_PID" ]; then
   ps -ef | grep "$SSH_AGENT_PID" | grep ssh-agent > /dev/null
@@ -100,6 +104,6 @@ export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/maven/bi
 # M2_HOME=/usr/local/maven
 # PATH=${M2_HOME}/bin:${PATH}
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+include "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && rvm use 1.9.3@ror3.2 --default
 
