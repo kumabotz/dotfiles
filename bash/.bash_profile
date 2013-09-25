@@ -107,3 +107,4 @@ export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/maven/bi
 include "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && rvm use 1.9.3@ror3.2 --default
 
+include "$HOME/.nvm/nvm.sh"
