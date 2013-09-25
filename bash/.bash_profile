@@ -40,7 +40,7 @@ function prompt {
   local PURPLEBOLD="\[\033[1;35m\]"
   local CYANBOLD="\[\033[1;36m\]"
   local WHITEBOLD="\[\033[1;37m\]"
-  export PS1="$CYANBOLD\u$CLEAR$BLACKBOLD at $CLEAR$YELLOWBOLD\h$CLEAR$BLACKBOLD in $CLEAR$GREENBOLD\w$CLEAR\$(parse_git_branch) "
+  export PS1="$CYANBOLD\u$CLEAR at $REDBOLD\h$CLEAR in $YELLOWBOLD\w$CLEAR $GREENBOLD\$(parse_git_branch)$CLEAR "
 }
 
 # start the ssh-agent
