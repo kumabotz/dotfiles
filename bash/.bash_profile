@@ -82,9 +82,14 @@ PS1='\[\e[1;33m\]\w\[\e[0m\] '
 # 10.  directory writable to others, with sticky bit
 # 11.  directory writable to others, without sticky bit
 export CLICOLOR=1
+export EDITOR='vim -f'
 export LSCOLORS=dxgxhxdxbxegedabagacad
 
 # aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
