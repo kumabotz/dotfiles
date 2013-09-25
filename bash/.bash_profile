@@ -1,6 +1,23 @@
-SSH_ENV="$HOME/.ssh/environment"
 # `-z STRING` - True if string is empty
 [ -z "$PS1" ] && return
+
+################################################################################
+# Functions
+################################################################################
+function include {
+  [[ -f "$1" ]] && source "$1"
+}
+
+# `2> /dev/null` - Fold stderr file descriptor to /dev/null
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+# `sed -e '/pattern/d'` - Deletes the line that match the pattern
+# `* master` and `nothing to commit (working directory clean)` => `(master*)`
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+}
 
 # prompt colors
 function prompt {
@@ -50,9 +67,10 @@ function test_identities {
   fi
 }
 
-function include {
-  [[ -f "$1" ]] && source "$1"
-}
+################################################################################
+# Main
+################################################################################
+SSH_ENV="$HOME/.ssh/environment"
 
 # check for running ssh-agent with proper $SSH_AGENT_PID
 if [ -n "$SSH_AGENT_PID" ]; then
