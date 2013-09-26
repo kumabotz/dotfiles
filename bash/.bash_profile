@@ -16,7 +16,7 @@ function parse_git_dirty {
 # `sed -e '/pattern/d'` - Deletes the line that match the pattern
 # `* master` and `nothing to commit (working directory clean)` => `(master*)`
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
 }
 
 # prompt colors
@@ -40,7 +40,7 @@ function prompt {
   local PURPLEBOLD="\[\033[1;35m\]"
   local CYANBOLD="\[\033[1;36m\]"
   local WHITEBOLD="\[\033[1;37m\]"
-  export PS1="$CYANBOLD\u$CLEAR at $REDBOLD\h$CLEAR in $YELLOWBOLD\w$CLEAR $GREENBOLD\$(parse_git_branch)$CLEAR "
+  export PS1="$CYANBOLD\u$CLEAR at $REDBOLD\h$CLEAR in $YELLOWBOLD\w$CLEAR$GREENBOLD\$(parse_git_branch)$CLEAR "
 }
 
 # start the ssh-agent
