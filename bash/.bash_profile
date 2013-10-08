@@ -143,8 +143,8 @@ export RAILS_ENV='development'
 export ANDROID='/Applications/android-sdk-macosx'
 export ANDROID_HOME='/Applications/android-sdk-macosx'
 export ANDROID_VIEW_CLIENT_HOME='/usr/local/bin/AndroidViewClient'
-export MAGICK_HOME='/usr/local/Cellar/imagemagick/6.7.7-6'
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+# export MAGICK_HOME='/usr/local/Cellar/imagemagick/6.7.7-6'
+# export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 
 export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/maven/bin:/usr/local/mysql/bin:$HOME/.rvm/gems/ruby-1.9.3-p194/bin:$HOME/.rvm/gems/ruby-1.9.3-p194@global/bin:$HOME/.rvm/rubies/ruby-1.9.3-p194/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:${PATH}
 
