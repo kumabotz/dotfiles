@@ -151,7 +151,4 @@ export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/maven/bi
 # M2_HOME=/usr/local/maven
 # PATH=${M2_HOME}/bin:${PATH}
 
-include "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && rvm use default
-
 include "$HOME/.nvm/nvm.sh"
