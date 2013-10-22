@@ -9,3 +9,5 @@ alias d='opendiff'
 alias nb='cd ~/Documents/bitbucket'
 alias ng='cd ~/Documents/github'
 alias oo='open'
+
+include ~/.bash_aliases.tmp
