@@ -41,4 +41,5 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+PATH=/usr/local/bin:$PATH # Add homebrew path
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
