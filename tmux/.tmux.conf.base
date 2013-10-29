@@ -63,3 +63,6 @@ setw -g mode-keys vi
 
 # setup 'v' to begin selection as in vim
 bind-key -t vi-copy v begin-selection
+
+# Enable mouse scrolling
+setw -g mode-mouse on
