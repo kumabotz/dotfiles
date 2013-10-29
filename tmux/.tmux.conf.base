@@ -64,5 +64,6 @@ setw -g mode-keys vi
 # setup 'v' to begin selection as in vim
 bind-key -t vi-copy v begin-selection
 
-# Enable mouse scrolling
+# Enable mouse scrolling and pane selection
 setw -g mode-mouse on
+setw -g mouse-select-pane on
