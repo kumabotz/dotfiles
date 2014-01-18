@@ -43,3 +43,6 @@ alias egrep='egrep --color=auto'
 
 PATH=/usr/local/bin:$PATH # Add homebrew path
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Add for Heroku Toolbelt and adb path
+export PATH="/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:$PATH"
