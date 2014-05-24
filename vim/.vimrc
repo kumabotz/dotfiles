@@ -193,7 +193,7 @@ vmap <Leader>P "+P
 " --------
 " 1. nerdtree.vim
 " --------
-map <C-n> :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 map <Leader>r :NERDTreeFind<CR>
 
 au VimEnter * NERDTree
