@@ -17,11 +17,12 @@ Plugin 'mileszs/ack.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-syntax enable
+call vundle#end()
+filetype plugin indent on " required
+syntax enable             " required
 " Put your non-Plugin stuff after this line
 "
 let mapleader = "\<Space>"
