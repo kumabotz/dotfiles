@@ -1,6 +1,12 @@
+" required by vundle
 set nocompatible
 
-call pathogen#infect()
+set rtp+=/.vim/bundle/vundle
+
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+"call pathogen#infect()
 
 " --------
 " 0. general
@@ -171,7 +177,7 @@ imap jk <esc>
 imap Jk <esc>
 
 " shortcut
-map <C-f> :Ag
+"map <C-f> :Ag
 map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>  " save
 nnoremap <Leader>q :q<CR>  " quit
@@ -199,6 +205,12 @@ map <Leader>r :NERDTreeFind<CR>
 au VimEnter * NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_smart_startup_focus=2
+
+" --------
+" 2. ack.vim
+" --------
+Bundle 'mileszs/ack.vim'
+map <Leader>f :Ack<space>
 
 " lightline config
 let g:powerline_symbols = 'fancy'
