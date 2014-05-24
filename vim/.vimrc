@@ -1,138 +1,99 @@
-" required by vundle
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rails'
+Plugin 'Raimondi/delimitMate'
+Plugin 'kien/ctrlp.vim'
+Plugin 'docunext/closetag.vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mileszs/ack.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'L9'
+Plugin 'rking/ag.vim'
 
-set rtp+=/.vim/bundle/vundle
-
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-"call pathogen#infect()
-
-" --------
-" 0. general
-" --------
-let mapleader="\<Space>"
-
-" hide the insert status in vim
-set noshowmode
-
-" display the status line always to see current mode, file name, file status, ruler
-set laststatus=2
-
-set encoding=utf-8
-set fileencodings=utf-8
-
-" set how many lines of history vim has to remember
-set history=300
-
-" enable filetype plugins
-filetype plugin indent on
-
-" set to auto read when a file is changed from the outside
-set autoread
-
-" set 7 lines scroll offset to the cursor - when moving vertically using j/k
-set so=7
-
-" turn on the wild menu
-set wildmode=list:longest,full
-set wildignore+=*/tmp/*
-
-" always show current position
-"set ruler " ruler is already enabled by powerline
-
-" height of the command bar
-set cmdheight=1 " default is 1
-
-" a buffer becomes hidden when it is abandoned
-set hid
-
-" make backspace work like most other apps
-set backspace=eol,start,indent
-
-" automatically wrap left and right
-set whichwrap+=<,>,h,l
-
-" ignore case when searching
-set ignorecase
-
-" when searching try to be smart about cases
-set smartcase
-
-" highlight search results
-set hlsearch
-
-" make search act like search in modern browsers
-set incsearch
-
-" don't redraw while executing macros (good for performance config)
-set lazyredraw
-
-" for regular expressions turn magic on
-set magic
-
-" show matching brackets when text indicator is over them
-set showmatch
-
-" how many tenths of a second to blink when matching brackets
-set mat=5
-
-" add a bit extra margin to the left
-"set foldcolumn=1
-
-" enable syntax highlighting
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 syntax enable
-set bg=dark
-set t_Co=256 "enable 256 colors
-colorscheme "wombat"
-
+" Put your non-Plugin stuff after this line
+"
+let mapleader = "\<Space>"
+set autoindent
+set background=dark
+set number
+set t_Co=256
 set pastetoggle=<F2>
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
-set cursorline
-"set cursorcolumn
-
-" turn backup off, since most stuff is in vcs anyway
-set nobackup
-set nowb
-set noswapfile
-
-" line number
-set nu
-
-" use spaces instead of tabs (expandtab)
-set et
-
-" be smart when using tabs
-set smarttab
-
-" use system clipboard
-if $TMUX == ''
-  set clipboard+=unnamed
-endif
-
-" 1 tab is 2 spaces (tabstop, softtabstop, shiftwidth, expandtab)
-set ts=2 sts=2 sw=2
-
-set ai " autoindent
-set si " smart indent
+set whichwrap+=<,>,h,l
+set incsearch                  " highlight as you type your search
+set ignorecase                 " make searches case-insensitive
+set smartcase                  " when searching try to be smart about cases
+set ruler                      " always show info along bottom
+set laststatus=2               " last window always has a statusline
+set smarttab                   " use tabs at the start of a line, spaces elsewhere
+set smartindent
+set list                            " show hidden characters
+set listchars=tab:▸\ ,trail:❤,eol:¬ "
+set history=300  " set how many lines of history vim has to remember
+set autoread     " set to auto read when a file is changed from outside
+set so=7         " set 7 lines scroll offset to cursor - when moving vertically
+set hid          " a buffer becomes hidden when it is abandoned
+set lazyredraw   " don't redraw while executing macros (good performance config)
+set magic        " for regular expressions turn magic on
+set showmatch    " show matching brackets when text indicator is over them
+set mat=5        " how many tenths of a second to blink when matching brackets
+set nobackup     " turn backup off, since most stuff is in vcs
+set nowb         "
+set noswapfile   "
 set wrap linebreak textwidth=0 " wrap lines
+set viminfo^=%   " remember info about open buffers on close
 
-" show invisible characters
-set list
-set listchars=tab:▸\ ,trail:❤,eol:¬
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_bold = "1"
 
-" visual mode pressing * or # searches for the current selection
-" super useful idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f', '')<CR>
-vnoremap <silent> # :call VisualSelection('b', '')<CR>
+map j gj " treat long lines as break lines (useful when moving around them)
+map k gk "
+
+" map auto complete of (, ", ', [
+inoremap ( ()<esc>i
+inoremap $2 []<esc>i
+inoremap $3 {}<esc>i
+inoremap $4 {<esc>o}<esc>O
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i
+inoremap $t <><esc>i)
+
+imap jk <esc> " map jk to esc
+imap Jk <esc> "
+
+map <C-n> :NERDTreeToggle<CR>
+map <C-f> :Ag
+map <Leader>r :NERDTreeFind<CR>
+map <Leader>t :tabnew<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>e :wq<CR>
+nnoremap <CR> G
+nnoremap <BS> gg
 
 " persistent undo
 set undodir=~/.vim/undodir
 set undofile
-set undolevels=1000 " maximum number of changes that can be undone
+set undolevels=1000  " maximum number of changes that can be undone
 set undoreload=10000 " maximum number lines to save for undo on a buffer reload
 
-" only do this part when support autocommands
 if has("autocmd")
   " enable file type detection
   filetype on
@@ -148,134 +109,7 @@ if has("autocmd")
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
-endif"
-
-" remember info about open buffers on close
-set viminfo^=%
-
-" treat long lines as break lines (usefull when moving around in them)
-noremap j gj
-noremap k gk
-
-" specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-catch
-endtry
-
-" map auto complete of (, ", ', [
-inoremap ( ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
-inoremap $t <><esc>i)
-
-" map jk to esc
-imap jk <esc>
-imap Jk <esc>
-
-" shortcut
-"map <C-f> :Ag
-map <Leader>t :tabnew<CR>
-nnoremap <Leader>w :w<CR>  " save
-nnoremap <Leader>q :q<CR>  " quit
-nnoremap <Leader>e :wq<CR> " save and quit
-nnoremap <CR> G  " end of file
-nnoremap <BS> gg " begin of file
-
-" vp doesn't replace paste buffer
-vmap <silent> <expr> p <sid>Repl()
-
-" copy paste with space y/p
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-
-" --------
-" 1. nerdtree.vim
-" --------
-map <Leader>n :NERDTreeToggle<CR>
-map <Leader>r :NERDTreeFind<CR>
-
-au VimEnter * NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-let g:nerdtree_tabs_smart_startup_focus=2
-
-" --------
-" 2. ack.vim
-" --------
-Bundle 'mileszs/ack.vim'
-map <Leader>f :Ack<space>
-
-" lightline config
-let g:powerline_symbols = 'fancy'
-let g:lightline = {
-      \ 'mode_map': { 'c': 'NORMAL' },
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-      \ },
-      \ 'component_function': {
-      \   'modified': 'MyModified',
-      \   'readonly': 'MyReadonly',
-      \   'fugitive': 'MyFugitive',
-      \   'filename': 'MyFilename',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode',
-      \ },
-      \ 'separator': { 'left': '➜', 'right': '⬅' },
-      \ 'subseparator': { 'left': '❯', 'right': '❮' }
-      \ }
-
-" --------
-" *. helper functions
-" --------
-function! MyModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '(╯°□°）╯︵ ┻━┻' : ''
-endfunction
-
-function! MyFugitive()
-  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-    let _ = fugitive#head()
-    return strlen(_) ? 'ಠ_ಠ '._ : ''
-  endif
-  return ''
-endfunction
-
-function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
-endfunction
-
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
-
-function! MyMode()
-  return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
+endif
 
 function! <SID>StripTrailingWhitespaces()
   " preparation: save last search, and cursor position
@@ -289,29 +123,9 @@ function! <SID>StripTrailingWhitespaces()
   " clean up: restore previous search history, and cursor position
   let @/=_s
   call cursor(l, c)
-endfunction"
-
-function! VisualSelection(direction, extra_filter) range
-  let l:saved_reg = @"
-  execute "normal! vgvy"
-
-  let l:pattern = escape(@", '\\/.*$^~[]')
-  let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-  if a:direction == 'b'
-    execute "normal ?" . l:pattern . "^M"
-  elseif a:direction == 'gv'
-    call CmdLine("vimgrep " . '/' . l:pattern . '/' . ' **/*.' . a:extra_filter)
-  elseif a:direction == 'replace'
-    call CmdLine("%s" . '/' . l:pattern . '/')
-  elseif a:direction == 'f'
-    execute "normal /" . l:pattern . "^M"
-  endif
-
-  let @/ = l:pattern
-  let @" = l:saved_reg
 endfunction
 
+" vp doesn't replace paste buffer
 function! RestoreRegister()
   let @" = s:restore_reg
   return ''
@@ -319,5 +133,24 @@ endfunction
 
 function! s:Repl()
   let s:restore_reg = @"
-  return "p@=RestoreRegister()\<CR>"
+  return "p@=RestoreRegister()\<cr>"
 endfunction
+vmap <silent> <expr> p <sid>Repl()
+
+" Copy paste with <Space>y/p
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
+set wildmenu
+set wildmode=list:longest,full
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+colorscheme solarized
