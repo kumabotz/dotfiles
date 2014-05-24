@@ -217,8 +217,8 @@ let g:lightline = {
       \   'fileencoding': 'MyFileencoding',
       \   'mode': 'MyMode',
       \ },
-      \ 'separator': { 'left': '|', 'right': '|' },
-      \ 'subseparator': { 'left': '>', 'right': '<' }
+      \ 'separator': { 'left': '➜', 'right': '⬅' },
+      \ 'subseparator': { 'left': '❯', 'right': '❮' }
       \ }
 
 " --------
@@ -229,13 +229,13 @@ function! MyModified()
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '(╯°□°）╯︵ ┻━┻' : ''
 endfunction
 
 function! MyFugitive()
   if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
     let _ = fugitive#head()
-    return strlen(_) ? '⭠ '._ : ''
+    return strlen(_) ? 'ಠ_ಠ '._ : ''
   endif
   return ''
 endfunction
