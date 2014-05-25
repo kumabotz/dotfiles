@@ -19,6 +19,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
