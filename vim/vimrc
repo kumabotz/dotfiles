@@ -15,6 +15,7 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'L9'
 Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -38,6 +39,7 @@ set expandtab
 
 set whichwrap+=<,>,h,l
 set incsearch                  " highlight as you type your search
+"set hlsearch
 set ignorecase                 " make searches case-insensitive
 set smartcase                  " when searching try to be smart about cases
 set ruler                      " always show info along bottom
@@ -45,7 +47,7 @@ set laststatus=2               " last window always has a statusline
 set smarttab                   " use tabs at the start of a line, spaces elsewhere
 set smartindent
 set list                            " show hidden characters
-set listchars=tab:▸\ ,trail:❤,eol:¬ "
+set listchars=tab:▸\ ,trail:❤,eol:¬
 set history=300  " set how many lines of history vim has to remember
 set autoread     " set to auto read when a file is changed from outside
 set so=7         " set 7 lines scroll offset to cursor - when moving vertically
@@ -55,8 +57,8 @@ set magic        " for regular expressions turn magic on
 set showmatch    " show matching brackets when text indicator is over them
 set mat=5        " how many tenths of a second to blink when matching brackets
 set nobackup     " turn backup off, since most stuff is in vcs
-set nowb         "
-set noswapfile   "
+set nowb
+set noswapfile
 set wrap linebreak textwidth=0 " wrap lines
 set viminfo^=%   " remember info about open buffers on close
 
@@ -74,7 +76,7 @@ inoremap $e ""<esc>i
 inoremap $t <><esc>i)
 
 imap jk <esc> " map jk to esc
-imap Jk <esc> "
+imap Jk <esc>
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Ag
