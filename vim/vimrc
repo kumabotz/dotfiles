@@ -64,9 +64,6 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
 
-map j gj " treat long lines as break lines (useful when moving around them)
-map k gk "
-
 " map auto complete of (, ", ', [
 inoremap ( ()<esc>i
 inoremap $2 []<esc>i
