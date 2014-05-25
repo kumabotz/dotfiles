@@ -28,7 +28,7 @@ function prompt {
   local PURPLEBOLD="\[\033[1;35m\]"
   local CYANBOLD="\[\033[1;36m\]"
   local WHITEBOLD="\[\033[1;37m\]"
-  export PS1="$CYANBOLD\u$CLEAR at $REDBOLD\h$CLEAR in $YELLOWBOLD\w$CLEAR$GREENBOLD\$(parse_git_branch)$CLEAR "
+  export PS1="$CYAN\u$CLEAR at $REDBOLD\h$CLEAR in $YELLOW\w$CLEAR$GREEN\$(parse_git_branch)$CLEAR "
 }
 
 export CLICOLOR=1
