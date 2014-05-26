@@ -82,7 +82,7 @@ imap jk <esc> " map jk to esc
 imap Jk <esc>
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-f> :Ag
+map <C-f> :Ag \-i<space>
 map <Leader>y :set nonu<CR>
 map <Leader>Y :set nu<CR>
 map <Leader>r :NERDTreeFind<CR>
