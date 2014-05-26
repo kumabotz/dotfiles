@@ -1,8 +1,8 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
@@ -20,6 +20,7 @@ Plugin 'L9'
 Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'autosession.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -44,6 +45,7 @@ set hlsearch
 set ignorecase                 " make searches case-insensitive
 set smartcase                  " when searching try to be smart about cases
 set ruler                      " always show info along bottom
+set colorcolumn=80
 set laststatus=2               " last window always has a statusline
 set smarttab                   " use tabs at the start of a line, spaces elsewhere
 set smartindent
