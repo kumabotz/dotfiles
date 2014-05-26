@@ -59,7 +59,7 @@ BASE16_SCHEME="default"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
-export PATH="/usr/local/sbin:/usr/local/bin:/Users/tery/.rvm/gems/ruby-2.1.1/bin:/Users/tery/.rvm/gems/ruby-2.1.1@global/bin:/Users/tery/.rvm/rubies/ruby-2.1.1/bin:/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/tery/.rvm/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/.rvm/gems/ruby-2.1.1/bin:$HOME/.rvm/gems/ruby-2.1.1@global/bin:$HOME/.rvm/rubies/ruby-2.1.1/bin:/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.rvm/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -130,17 +130,3 @@ export LSCOLORS=dxgxhxdxbxegedabagacad
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-pATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Add for Heroku Toolbelt and adb path
-export PATH="/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:$PATH"
-
-# {{{
-# Node Completion - Auto-generated, do not touch.
-shopt -s progcomp
-for f in $(command ls ~/.node-completion); do
-  f="$HOME/.node-completion/$f"
-  test -f "$f" && . "$f"
-done
-# }}}
