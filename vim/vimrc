@@ -37,7 +37,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-
+set backspace=eol,start,indent " make backspace work normally
 set whichwrap+=<,>,h,l
 set incsearch                  " highlight as you type your search
 set hlsearch
@@ -47,8 +47,8 @@ set ruler                      " always show info along bottom
 set laststatus=2               " last window always has a statusline
 set smarttab                   " use tabs at the start of a line, spaces elsewhere
 set smartindent
-set list                            " show hidden characters
-set listchars=tab:▸\ ,trail:❤,eol:¬
+set list                       " show hidden characters
+set listchars=tab:▸\ ,trail:❤
 set history=300  " set how many lines of history vim has to remember
 set autoread     " set to auto read when a file is changed from outside
 set so=7         " set 7 lines scroll offset to cursor - when moving vertically
@@ -62,10 +62,6 @@ set nowb
 set noswapfile
 set wrap linebreak textwidth=0 " wrap lines
 set viminfo^=%   " remember info about open buffers on close
-
-if $TMUX == ''
-  set clipboard+=unnamed
-endif
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
@@ -85,6 +81,8 @@ imap Jk <esc>
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Ag
+map <Leader>y :set nonu<CR>
+map <Leader>Y :set nu<CR>
 map <Leader>r :NERDTreeFind<CR>
 map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
