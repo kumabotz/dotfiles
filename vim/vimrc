@@ -40,7 +40,7 @@ set expandtab
 
 set whichwrap+=<,>,h,l
 set incsearch                  " highlight as you type your search
-"set hlsearch
+set hlsearch
 set ignorecase                 " make searches case-insensitive
 set smartcase                  " when searching try to be smart about cases
 set ruler                      " always show info along bottom
@@ -62,6 +62,10 @@ set nowb
 set noswapfile
 set wrap linebreak textwidth=0 " wrap lines
 set viminfo^=%   " remember info about open buffers on close
+
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
