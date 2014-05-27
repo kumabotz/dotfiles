@@ -30,7 +30,8 @@ syntax enable             " required
 "
 let mapleader = "\<Space>"
 set autoindent
-set background=dark " alternatively, set to light for solarize-light
+" set background=dark " alternatively, set to light for solarize-light
+set background=light
 set number
 set t_Co=256
 set pastetoggle=<F2>
@@ -83,8 +84,7 @@ imap Jk <esc>
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Ag \-i<space>
-map <Leader>y :set nonu<CR>
-map <Leader>Y :set nu<CR>
+map <Leader>n :set nu!<CR>
 map <Leader>r :NERDTreeFind<CR>
 map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
