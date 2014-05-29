@@ -30,7 +30,7 @@ syntax enable             " required
 "
 let mapleader = "\<Space>"
 set autoindent
-set background=dark " alternatively, set to light for solarize-light
+set background=light " alternatively, set to dark for solarize-dark
 set number
 set t_Co=256
 set pastetoggle=<F2>
@@ -91,8 +91,6 @@ map <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :wq<CR>
-nnoremap <CR> G
-nnoremap <BS> gg
 
 " visual mode pressing * or # searches for the current selection
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
