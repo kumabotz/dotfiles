@@ -83,8 +83,6 @@ inoremap $t <><esc>i)
 imap jk <esc> " map jk to esc
 imap Jk <esc>
 
-vmap <Leader>g :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Ag \-i<space>
 map <Leader>n :set nu!<CR>
