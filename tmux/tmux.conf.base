@@ -55,15 +55,6 @@ set -g visual-activity on
 # highlight active window
 setw -g window-status-current-bg magenta
 
-# ---------------------------------------------------
-# thoughtbot: tmux-copy-paste-on-os-x-a-better-future
-# ---------------------------------------------------
-# use vim keybindings in copy mode
-setw -g mode-keys vi
-
-# setup 'v' to begin selection as in vim
-bind-key -t vi-copy v begin-selection
-
 # Enable mouse scrolling and pane selection
 setw -g mode-mouse on
 setw -g mouse-select-pane on
