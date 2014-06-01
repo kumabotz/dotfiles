@@ -1,5 +1,15 @@
 source-file .tmux.conf.base
 
+# ---------------------------------------------------
+# thoughtbot: tmux-copy-paste-on-os-x-a-better-future
+# ---------------------------------------------------
+# brew install reattach-to-user-namespace
+
+# use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# setup 'v' to begin selection as in vim
+bind-key -t vi-copy v begin-selection
 bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
 # update default binding of `Enter` to also use copy-pipe
