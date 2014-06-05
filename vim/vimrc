@@ -21,6 +21,7 @@ Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'autosession.vim'
+Plugin 'Valloric/YouCompleteMe' " https://github.com/Valloric/YouCompleteMe#full-installation-guide
 
 " All of your Plugins must be added before the following line
 call vundle#end()
