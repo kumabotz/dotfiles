@@ -32,6 +32,7 @@ syntax enable             " required
 let mapleader = "\<Space>"
 set autoindent
 set background=light " alternatively, set to dark for solarize-dark
+" set background=dark
 set number
 set t_Co=256
 set pastetoggle=<F2>
