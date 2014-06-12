@@ -108,3 +108,6 @@ PS1="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg_bold[red]%}%m%{$reset_color%} in %
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
+export JAVA_HOME=$(/usr/libexec/java_home)
