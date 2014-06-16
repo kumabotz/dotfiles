@@ -31,7 +31,6 @@ filetype plugin indent on " required
 syntax enable             " required
 " Put your non-Plugin stuff after this line
 "
-let g:airline_powerline_fonts = 1
 let mapleader = "\<Space>"
 set autoindent
 set background=light " alternatively, set to dark for solarize-dark
@@ -71,10 +70,13 @@ set nowb
 set noswapfile
 set wrap linebreak textwidth=0 " wrap lines
 set viminfo^=%   " remember info about open buffers on close
+set foldmethod=marker
+set foldmarker={,}
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
+let g:airline_powerline_fonts = 1
 
 " map auto complete of (, ", ', [
 inoremap ( ()<esc>i
