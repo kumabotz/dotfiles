@@ -23,6 +23,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'autosession.vim'
 Plugin 'Valloric/YouCompleteMe' " https://github.com/Valloric/YouCompleteMe#full-installation-guide
 Plugin 'Shutnik/jshint2.vim'
+Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -30,6 +31,7 @@ filetype plugin indent on " required
 syntax enable             " required
 " Put your non-Plugin stuff after this line
 "
+let g:airline_powerline_fonts = 1
 let mapleader = "\<Space>"
 set autoindent
 set background=light " alternatively, set to dark for solarize-dark
