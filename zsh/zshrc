@@ -5,7 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+
+DEFAULT_USER="tery"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -54,11 +56,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Base16 Shell
-BASE16_SCHEME="default"
-BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
-
 export PATH="/usr/local/sbin:/usr/local/bin:$HOME/.rvm/gems/ruby-2.1.1/bin:$HOME/.rvm/gems/ruby-2.1.1@global/bin:$HOME/.rvm/rubies/ruby-2.1.1/bin:/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.rvm/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -103,7 +100,8 @@ export EDITOR='vim -f'
 export LSCOLORS=dxgxhxdxbxegedabagacad
 
 autoload -U colors && colors
-PS1="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg_bold[red]%}%m%{$reset_color%} in %{$fg[yellow]%}%~%{$reset_color%}%{$fg[green]%}\$(parse_git_branch)%{$reset_color%} "
+# comment out for powerline theme to work
+# PS1="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg_bold[red]%}%m%{$reset_color%} in %{$fg[yellow]%}%~%{$reset_color%}%{$fg[green]%}\$(parse_git_branch)%{$reset_color%} "
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
