@@ -34,7 +34,7 @@ syntax enable             " required
 "
 let mapleader = "\<Space>"
 set autoindent
-set background=dark
+set background=light
 set number
 set t_Co=256
 set pastetoggle=<F2>
@@ -193,5 +193,4 @@ set wildmenu
 set wildmode=list:longest,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-" colorscheme solarized
-colorscheme Tomorrow-Night
+colorscheme solarized
