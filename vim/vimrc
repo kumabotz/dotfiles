@@ -33,8 +33,7 @@ syntax enable             " required
 "
 let mapleader = "\<Space>"
 set autoindent
-set background=light " alternatively, set to dark for solarize-dark
-" set background=dark
+set background=dark
 set number
 set t_Co=256
 set pastetoggle=<F2>
@@ -70,8 +69,6 @@ set nowb
 set noswapfile
 set wrap linebreak textwidth=0 " wrap lines
 set viminfo^=%   " remember info about open buffers on close
-set foldmethod=marker
-set foldmarker={,}
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
@@ -189,8 +186,10 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
+let jshint2_save = 1
 set wildmenu
 set wildmode=list:longest,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-colorscheme solarized
+" colorscheme solarized
+colorscheme Tomorrow-Night
