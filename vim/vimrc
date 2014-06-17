@@ -24,6 +24,7 @@ Plugin 'autosession.vim'
 Plugin 'Valloric/YouCompleteMe' " https://github.com/Valloric/YouCompleteMe#full-installation-guide
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'bling/vim-airline'
+Plugin 'jelera/vim-javascript-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -74,6 +75,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_bold = "1"
 let g:airline_powerline_fonts = 1
+au FileType javascript call JavaScriptFold()
 
 " map auto complete of (, ", ', [
 inoremap ( ()<esc>i
