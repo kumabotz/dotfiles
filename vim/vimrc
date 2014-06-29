@@ -25,6 +25,7 @@ Plugin 'Valloric/YouCompleteMe' " https://github.com/Valloric/YouCompleteMe#full
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'digitaltoad/vim-jade'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
