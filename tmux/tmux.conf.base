@@ -51,7 +51,7 @@ setw -g monitor-activity on
 set -g visual-activity on
 
 # highlight active window
-setw -g window-status-current-bg colour13
+setw -g window-status-current-bg yellow
 setw -g window-status-current-fg white
 
 # Enable mouse scrolling and pane selection
