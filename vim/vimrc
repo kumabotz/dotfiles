@@ -21,7 +21,7 @@ Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'autosession.vim'
-Plugin 'Valloric/YouCompleteMe' " https://github.com/Valloric/YouCompleteMe#full-installation-guide
+" Plugin 'Valloric/YouCompleteMe' " https://github.com/Valloric/YouCompleteMe#full-installation-guide
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
