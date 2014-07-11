@@ -35,7 +35,7 @@ syntax enable             " required
 "
 let mapleader = "\<Space>"
 set autoindent
-set background=dark
+set background=light
 set number
 set t_Co=256
 set pastetoggle=<F2>
