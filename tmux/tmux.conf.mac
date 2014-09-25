@@ -1,5 +1,11 @@
 source-file .tmux.conf.base
 
+# --------------------------
+# thoughtbot: love-hate-tmux
+# --------------------------
+# improve colors
+set -g default-terminal "screen-256color"
+
 # ---------------------------------------------------
 # thoughtbot: tmux-copy-paste-on-os-x-a-better-future
 # ---------------------------------------------------

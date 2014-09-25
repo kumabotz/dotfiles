@@ -22,12 +22,6 @@ unbind %
 bind | split-window -h
 bind - split-window -v
 
-# --------------------------
-# thoughtbot: love-hate-tmux
-# --------------------------
-# improve colors
-set -g default-terminal "screen-256color"
-
 # ---------------------------
 # mutelight.org/pratical-tmux
 # ---------------------------
