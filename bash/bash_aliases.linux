@@ -4,6 +4,7 @@ function include {
 
 include ~/.bash_aliases.base
 
+alias ack='~/local/bin/ack'
 alias bye='sudo shutdown -P now'
 alias d='meld'
 alias ff='firefox &'
