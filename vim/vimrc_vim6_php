@@ -105,6 +105,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-]> gt
 map <C-[> gT
+map <C-r> :tabdo e<CR>
 map <Leader>1 1gt
 map <Leader>2 2gt
 map <Leader>3 3gt
