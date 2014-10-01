@@ -105,7 +105,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-]> gt
 map <C-[> gT
-map <C-r> :tabdo e<CR>
 map <Leader>1 1gt
 map <Leader>2 2gt
 map <Leader>3 3gt
@@ -113,7 +112,8 @@ map <Leader>4 4gt
 map <Leader>5 5gt
 map <Leader>9 :tablast<CR>
 map <Leader>n :set nu!<CR>
-map <Leader>r :NERDTreeFind<CR>
+map <Leader>f :NERDTreeFind<CR>
+map <Leader>r :tabdo e<CR>
 map <Leader>t :tabnew<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>q :q<CR>
