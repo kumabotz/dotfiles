@@ -6,7 +6,8 @@ include ~/.bash_aliases.base
 
 alias ack='~/local/bin/ack'
 alias bye='sudo shutdown -P now'
-alias d='meld'
+alias d='colordiff'
+alias dw='colordiff -w'
 alias ff='firefox &'
 alias nb='cd ~/Projects/bitbucket'
 alias ng='cd ~/Projects/github'
