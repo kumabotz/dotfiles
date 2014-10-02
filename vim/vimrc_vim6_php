@@ -376,8 +376,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
 let g:checksyntax#auto_enable_rx = '.'
+let g:NERDTreeDirArrows = 0
 let jshint2_save = 1
-let php_folding=1
+let php_folding = 1
 
 set wildmenu
 set wildmode=list:longest,full
