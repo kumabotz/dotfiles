@@ -373,4 +373,4 @@ set wildmenu
 set wildmode=list:longest,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-colorscheme solarized
+colorscheme Tomorrow-Night
