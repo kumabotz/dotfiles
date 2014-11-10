@@ -9,6 +9,6 @@ alias d='opendiff'
 alias nb='cd ~/Documents/bitbucket'
 alias ng='cd ~/Documents/github'
 alias oo='open'
-alias v='/Applications/MacVim.app/Contents/MacOS/Vim'
+# alias v='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 include ~/.bash_aliases.tmp
