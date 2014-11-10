@@ -96,7 +96,7 @@ function parse_git_branch {
 }
 
 export CLICOLOR=1
-export EDITOR='vim -f'
+#export EDITOR='vim -f'
 export LSCOLORS=dxgxhxdxbxegedabagacad
 
 autoload -U colors && colors
