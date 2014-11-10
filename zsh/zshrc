@@ -101,7 +101,7 @@ export LSCOLORS=dxgxhxdxbxegedabagacad
 
 autoload -U colors && colors
 # comment out for powerline theme to work
-# PS1="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg_bold[red]%}%m%{$reset_color%} in %{$fg[yellow]%}%~%{$reset_color%}%{$fg[green]%}\$(parse_git_branch)%{$reset_color%} "
+PS1="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg_bold[red]%}%m%{$reset_color%} in %{$fg[yellow]%}%~%{$reset_color%}%{$fg[green]%}\$(parse_git_branch)%{$reset_color%} "
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
