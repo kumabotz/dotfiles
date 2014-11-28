@@ -56,7 +56,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/.rvm/gems/ruby-2.1.1/bin:$HOME/.rvm/gems/ruby-2.1.1@global/bin:$HOME/.rvm/rubies/ruby-2.1.1/bin:/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.rvm/bin"
+
+#export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
+export ANDROID_HOME=/Applications/adt-bundle-mac/sdk
+
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/.rvm/gems/ruby-2.1.1/bin:$HOME/.rvm/gems/ruby-2.1.1@global/bin:$HOME/.rvm/rubies/ruby-2.1.1/bin:/usr/local/heroku/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/.rvm/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -107,5 +111,4 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
 export JAVA_HOME=$(/usr/libexec/java_home)
