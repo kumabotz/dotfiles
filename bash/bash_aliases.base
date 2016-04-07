@@ -1,5 +1,6 @@
 alias ..='cd ..'
 alias ....='.. && ..'
+alias aa='cat ~/.bash_aliases*'
 alias c='clear'
 alias cma='chmod -R 777'
 alias cmw='chmod -R a+w'
