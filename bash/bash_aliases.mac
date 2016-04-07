@@ -10,6 +10,7 @@ alias nb='cd ~/Documents/bitbucket'
 alias ng='cd ~/Documents/github'
 alias nl='cd ~/Documents/gitlab'
 alias oo='open'
+alias sub='sublime'
 # alias v='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 include ~/.bash_aliases.tmp
