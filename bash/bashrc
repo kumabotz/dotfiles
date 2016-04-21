@@ -51,3 +51,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Add for Heroku Toolbelt and adb path
 export PATH="/usr/local/heroku/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:$HOME/local/bin:$PATH"
+
+if [ -f ~/.bash_aliases ]; then
+  source ~/.bash_aliases
+fi
+
+export LANG=en_US.UTF-8
