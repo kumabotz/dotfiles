@@ -8,7 +8,7 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-PATH=/usr/local/sbin:/usr/local/bin:./node_modules/.bin:$PATH:$HOME/bin
+PATH=/usr/local/sbin:/usr/local/bin:./node_modules/.bin:$PATH:$HOME/bin:$HOME/.node/bin
 export PATH
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
