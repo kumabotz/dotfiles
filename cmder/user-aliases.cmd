@@ -30,6 +30,7 @@ gp=git push $*
 gt=git status -sb
 gu=git pull -p
 l=ls -alGh --show-control-chars -F --color $*
+m=less $*
 md=mkdir $*
 nw=cd e:\Users\Public\Documents\sli\gitlab
 rmd=rm -rf $*
