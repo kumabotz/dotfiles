@@ -25,6 +25,7 @@ gba=git branch -a $*
 gc=git commit $*
 gca=git commit -a
 gd=git diff $*
+gh=git stash
 gi=git init
 gl=git log --oneline
 gn=git clone $*
