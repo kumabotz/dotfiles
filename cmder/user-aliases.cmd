@@ -28,6 +28,7 @@ gd=git diff $*
 gh=git stash $*
 gi=git init
 gl=git log --oneline
+gm=git merge $*
 gn=git clone $*
 go=git checkout $*
 gp=git push $*
