@@ -32,6 +32,7 @@ gm=git merge $*
 gn=git clone $*
 go=git checkout $*
 gp=git push $*
+gs=git show $*
 gt=git status -sb
 gu=git pull -p
 l=ls -alGh --show-control-chars -F --color $*
