@@ -16,6 +16,7 @@ cmderr=cd /d "%CMDER_ROOT%"
 
 ..=cd ..
 ....=cd .. && cd ..
+adb="C:\Program Files (x86)\Android\android-sdk\platform-tools\adb" $*
 c=clear
 e=echo $*
 ga=git add $*
